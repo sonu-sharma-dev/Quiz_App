@@ -3,6 +3,7 @@ package com.sonu.quizapp.service;
 import com.sonu.quizapp.entity.Question;
 import com.sonu.quizapp.entity.QuestionWrapper;
 import com.sonu.quizapp.entity.Quiz;
+import com.sonu.quizapp.entity.Responce;
 import com.sonu.quizapp.repository.QuestionRepository;
 import com.sonu.quizapp.repository.QuizRepository;
 import lombok.Data;
@@ -49,5 +50,19 @@ public class QuizService {
         }
 
         return new ResponseEntity<>(questionForUsers,HttpStatus.OK);
+    }
+
+    public ResponseEntity<Integer> calculateResult(Integer id, List<Responce> responces) {
+        Quiz quiz=quizRepository.findById(id).get();
+        List<Question>questions=quiz.getQuestions();
+        int right=0;
+        int i=0;
+        for (Responce responce1:responces){
+            if (responce1.getResponse().equals(questions.get(i).getCorrectOption())) {
+                right++;
+            }
+            i++;
+        }
+        return new ResponseEntity<>(right,HttpStatus.OK);
     }
 }

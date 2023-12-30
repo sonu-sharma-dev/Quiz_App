@@ -1,6 +1,7 @@
 package com.sonu.quizapp.controller;
 
 import com.sonu.quizapp.entity.QuestionWrapper;
+import com.sonu.quizapp.entity.Responce;
 import com.sonu.quizapp.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +30,11 @@ public class QuizController {
     @GetMapping("/get/{id}")
     public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(@PathVariable int id){
         return quizService.getQuizQuestions(id);
+    }
+
+    @PostMapping("/submit/{id}")
+    public ResponseEntity<Integer> submitQuiz(@PathVariable Integer id,@RequestBody List<Responce> responces){
+        return quizService.calculateResult(id,responces);
     }
 
 }

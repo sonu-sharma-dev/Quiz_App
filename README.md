@@ -1,25 +1,34 @@
 # Quiz App
 
-This is a simple quiz app developed using Spring Boot.
+Welcome to the Quiz App repository! This Spring Boot application allows you to manage quizzes, questions, and allows users to attempt quizzes and receive results.
+
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Admin Panel](#admin-panel)
+  - [User Dashboard](#user-dashboard)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Features
 
-- Questions with multiple-choice answers
-- ...
-
-## Technologies Used
-
-- Spring Boot
-- Java
-- MYSQL
+- Insert, delete, and update questions.
+- Create and manage quizzes.
+- User authentication and authorization.
+- Users can attempt quizzes and receive instant results.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Java 11 or later
-- Maven
-- ...
+- Java Development Kit (JDK) installed (version X.X or higher).
+- Maven installed (version X.X or higher).
+- MySQL or another supported database installed and running.
 
 ### Installation
 
@@ -27,3 +36,4 @@ This is a simple quiz app developed using Spring Boot.
 
    ```bash
    git clone https://github.com/sonu-sharma-dev/Quiz_App.git
+   cd quiz-app

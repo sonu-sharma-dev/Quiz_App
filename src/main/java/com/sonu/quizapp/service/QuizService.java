@@ -44,7 +44,7 @@ public class QuizService {
         List<Question> questionsFromDb=quiz.get().getQuestions();
         List<QuestionWrapper> questionForUsers=new ArrayList<>();
         for (Question q: questionsFromDb){
-            QuestionWrapper qw=new QuestionWrapper(q.getId(),q.getOptionA(),q.getOptionB(),q.getOptionC(),q.getOptionD());
+            QuestionWrapper qw=new QuestionWrapper(q.getId(),q.getQuestionText(),q.getOptionA(),q.getOptionB(),q.getOptionC(),q.getOptionD());
             questionForUsers.add(qw);
         }
 

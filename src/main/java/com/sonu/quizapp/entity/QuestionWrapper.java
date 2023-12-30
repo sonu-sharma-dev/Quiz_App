@@ -2,9 +2,13 @@ package com.sonu.quizapp.entity;
 
 
 import jakarta.persistence.Column;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class QuestionWrapper {
 
     @Column(name = "id")
@@ -19,8 +23,4 @@ public class QuestionWrapper {
     private String optionC;
     @Column(name = "option_d")
     private String optionD;
-
-
-    public QuestionWrapper(Long id, String optionA, String optionB, String optionC, String optionD) {
-    }
 }

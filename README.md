@@ -8,12 +8,7 @@ Welcome to the Quiz App repository! This Spring Boot application allows you to m
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
-  - [Admin Panel](#admin-panel)
-  - [User Dashboard](#user-dashboard)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+
 
 ## Features
 
